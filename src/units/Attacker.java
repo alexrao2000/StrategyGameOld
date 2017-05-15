@@ -9,6 +9,11 @@ public class Attacker extends Unit{
 	private ArrayList<Weapon> weapons;
 	//private Weapon weapon;
 	
+	/**Creates an attacker object that can move and attack
+	 * 
+	 * @param hp the attacker's health points
+	 * @param power the amount of damage the attacker inflicts
+	 */
 	public Attacker(int hp, int power)
 	{
 		super();
@@ -17,15 +22,22 @@ public class Attacker extends Unit{
 		weapons = new ArrayList<Weapon>();
 	}
 	
+	/**makes the attacker attack an enemy
+	 * 
+	 */
 	public void attack()
 	{
 		
 		
 	}
-
-	public void getWeapon(Weapon name)
+	
+	/**Makes the attacker get a weapon
+	 * 
+	 * @param weapon the weapon being collected
+	 */
+	public void getWeapon(Weapon weapon)
 	{
-		weapons.add(name);
+		weapons.add(weapon);
 		
 	}
 	

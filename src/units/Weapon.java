@@ -1,10 +1,20 @@
 package units;
 
+/**This class represents a weapon used by attackers
+ * 
+ * @author ewan633
+ *
+ */
 public class Weapon 
 {
 	private String name;
 	private int strength;
 	
+	/**Creates a weapon
+	 * 
+	 * @param name name of weapon
+	 * @param strength 
+	 */
 	public Weapon(String name, int strength)
 	{
 		this.name = name;

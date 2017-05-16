@@ -9,6 +9,7 @@ public class Healer extends Unit
 {
 	private int hp;
 	private int power;
+	private boolean isPlayerControlled;
 	
 	/**Creates a default healer object
 	 * 
@@ -24,10 +25,11 @@ public class Healer extends Unit
 	 * @param hp the healer's health points
 	 * @param power the amount of healer the healer does
 	 */
-	public Healer(int hp, int power)
+	public Healer(boolean isPlayerControlled, int hp, int power)
 	{
-		super();
-		
+		this.isPlayerControlled = isPlayerControlled;
+		this.hp = hp;
+		this.power = power;
 	}
 
 	/**Heals a unit
@@ -37,6 +39,12 @@ public class Healer extends Unit
 	public void heal(Unit other)
 	{
 		other.getHealed(this);
+		
+	}
+	
+	public void draw()
+	{
+		
 		
 	}
 	

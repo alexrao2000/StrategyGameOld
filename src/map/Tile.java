@@ -3,7 +3,7 @@ package map;
 import units.Unit;
 
 /**
- * This class represents a spot on the grid
+ * This class represents a spot on the grid.
  * 
  * @author aghatge738
  *

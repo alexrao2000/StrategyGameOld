@@ -10,6 +10,12 @@ public class Weapon
 	private String name;
 	private int strength;
 	
+	public Weapon()
+	{
+		name = "Default";
+		strength = 10;
+	}
+	
 	/**Creates a weapon
 	 * 
 	 * @param name name of weapon

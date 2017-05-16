@@ -46,10 +46,9 @@ public class Unit {
 	 * 
 	 * @param weapon the weapon used to attack this unit
 	 */
-	public void takeDamage(Weapon weapon)
+	public void takeDamage(int amount)
 	{
-		hp -= weapon.getStrength();
-		
+		hp -= amount;		
 	}
 	
 	/**Makes unit die and removes him from grid
@@ -87,5 +86,10 @@ public class Unit {
 	{
 		hp += (int)(Math.random()*10);
 		power += (int)(Math.random()*10);
+	}
+	
+	public boolean isPlayerControlled()
+	{
+		return isPlayerControlled;
 	}
 }

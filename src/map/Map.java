@@ -1,7 +1,7 @@
 package map;
 
-import processing.core.PApplet;
 import units.Unit;
+import processing.core.PApplet;
 
 public class Map {
 	

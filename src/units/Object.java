@@ -6,11 +6,11 @@ public class Object extends Unit{
 		super(false, 100000000, 0);
 	}
 	
-	public void die() {
+	public void move() {
 		
 	}
 	
-	public void move() {
+	public void die() {
 		
 	}
 

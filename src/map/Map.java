@@ -61,7 +61,10 @@ public class Map {
 		for(int y = 0; y < 15; y++) {
 			for(int x = 0; x < 15; x++) {
 				drawer.rect(xCor, yCor, height, width);
+				xCor += width;
 			}
+			yCor += height;
+			xCor = 0;
 		}
 		
 	}

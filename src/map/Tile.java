@@ -17,12 +17,12 @@ public class Tile {
 		unit = object;
 	}
 	
-	public String getTerrain() {
-		return terrain;
-	}
-	
 	public Unit getUnit() {
 		return unit;
+	}
+	
+	public String getTerrain() {
+		return terrain;
 	}
 	
 	public void addUnit(Unit object) {

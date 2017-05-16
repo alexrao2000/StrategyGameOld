@@ -9,6 +9,7 @@ public class Unit {
 	
 	private int hp;
 	private int power;
+	private boolean isPlayerControlled;
 	
 	/**
 	 * Creates a default unit with both hp and power at 10
@@ -24,8 +25,9 @@ public class Unit {
 	 * @param hp the amount of health points the unit will have
 	 * @param power the amount of damage/healing the unit will do
 	 */
-	public Unit(int hp, int power)
+	public Unit(boolean isPlayerControlled, int hp, int power)
 	{
+		this.isPlayerControlled = isPlayerControlled;
 		this.hp = hp;
 		this.power = power;
 	}

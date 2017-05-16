@@ -10,7 +10,7 @@ public class Unit {
 	private int hp;
 	private int power;
 	private boolean isPlayerControlled;
-	
+	//
 	/**
 	 * Creates a default unit with both hp and power at 10
 	 */

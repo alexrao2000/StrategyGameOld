@@ -11,7 +11,7 @@ public class GameWindow extends JPanel {
 	public GameWindow() {
 		super();
 		setBackground(Color.GREEN);
-		// TODO Add GUI customizations to the panel
+
 		
 		add(new JButton("Start"));
 		add(new JButton("Load"));
@@ -22,13 +22,7 @@ public class GameWindow extends JPanel {
 	}
 
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g); // Call JPanel's paintComponent method
-									// to paint the background
-
-		int width = getWidth();
-		int height = getHeight();
-
-		// TODO Draw on the panel here
+		super.paintComponent(g);
 	
 	}
 }

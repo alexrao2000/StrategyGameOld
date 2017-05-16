@@ -10,6 +10,7 @@ public class Healer extends Unit
 	private int hp;
 	private int power;
 	private boolean isPlayerControlled;
+	//
 	
 	/**Creates a default healer object
 	 * 

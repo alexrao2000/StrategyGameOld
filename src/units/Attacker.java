@@ -6,10 +6,10 @@ public class Attacker extends Unit{
 	
 	private int hp;
 	private int power;
-	private ArrayList<Weapon> weapons;
+	//private ArrayList<Weapon> weapons;
 	private boolean isPlayerControlled;
-	//private Weapon weapon;
-	
+	private Weapon weapon;
+	//
 	/**Creates an attacker object that can move and attack
 	 * 
 	 * @param hp the attacker's health points
@@ -20,16 +20,16 @@ public class Attacker extends Unit{
 		this.isPlayerControlled = isPlayerControlled;
 		this.hp = hp;
 		this.power = power;
-		
-		weapons = new ArrayList<Weapon>();
+		weapon = new Weapon();
+		//weapons = new ArrayList<Weapon>();
 	}
 	
 	/**makes the attacker attack an enemy
 	 * 
 	 */
-	public void attack()
+	public void attack(Unit other)
 	{
-		
+		other.takeDamage(weapon.getStrength() + getPower());
 		
 	}
 	
@@ -37,10 +37,10 @@ public class Attacker extends Unit{
 	 * 
 	 * @param weapon the weapon being collected
 	 */
-	public void getWeapon(Weapon weapon)
+	public void changeWeapon(Weapon weapon)
 	{
-		weapons.add(weapon);
-		
+		//weapons.add(weapon);
+		this.weapon = weapon;
 	}
 	
 	public void draw()

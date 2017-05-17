@@ -53,18 +53,15 @@ public class Map {
 		float height = drawer.height/15f;
 		float width = drawer.width/15f;
 		
-		float xCor = 0;
-		float yCor = 0;
-		
 		drawer.stroke(0, 0, 0);
 		drawer.noFill();
-		for(int y = 0; y < 15; y++) {
-			for(int x = 0; x < 15; x++) {
-				drawer.rect(xCor, yCor, height, width);
-				xCor += width;
-			}
-			yCor += height;
-			xCor = 0;
+		
+		float xCor = width, yCor = height;
+		for(int x = 0; x < 15; x++) {
+			drawer.line(0, yCor, drawer.width, yCor);
+			drawer.line(xCor, 0, xCor, drawer.height);
+			xCor += height;
+			yCor += width;
 		}
 		
 	}

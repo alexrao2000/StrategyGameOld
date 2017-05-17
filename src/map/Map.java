@@ -1,7 +1,7 @@
 package map;
 
 import units.Unit;
-import processing.core.PApplet;
+import java.awt.Graphics;
 
 public class Map {
 	
@@ -48,23 +48,19 @@ public class Map {
 		}
 	}
 	
-	
-	public void draw(PApplet drawer) {
-		float height = drawer.height/15f;
-		float width = drawer.width/15f;
+	public void paintComponent(Graphics g, int height, int width) {
+		int xDist = height/15;
+		int yDist = width/15;
 		
-		drawer.stroke(0, 0, 0);
-		drawer.noFill();
+		int xCor = xDist;
+		int yCor = yDist;
 		
-		float xCor = width, yCor = height;
 		for(int x = 0; x < 15; x++) {
-			drawer.line(0, yCor, drawer.width, yCor);
-			drawer.line(xCor, 0, xCor, drawer.height);
-			xCor += height;
-			yCor += width;
+			g.drawLine(xCor, 0, xCor, height);
+			g.drawLine(0, yCor, width, yCor);
+			xCor += xDist;
+			yCor += yDist;
 		}
-		
 	}
-	
 
 }

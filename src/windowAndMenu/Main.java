@@ -1,6 +1,11 @@
 package windowAndMenu;
 
 import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.*;
@@ -11,6 +16,7 @@ public class Main extends JFrame {
 	
 	public Main(String title) {
 		super(title);
+		
 		setBounds(100, 100, 800, 600);
 	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
@@ -18,14 +24,16 @@ public class Main extends JFrame {
 	    CardLayout cl = new CardLayout();
 	    cardPanel.setLayout(cl);
 	    
-		OptionMenu panel1 = new OptionMenu(this);    
+		MainMenu panel1 = new MainMenu(this);    
 		GameMenu panel2 = new GameMenu(this);
-	
+
 	    cardPanel.add(panel1,"1"); // Card is named "1"
 	    cardPanel.add(panel2,"2"); // Card is named "2"
 	    
 	    add(cardPanel);
 	    addKeyListener(panel2);
+	    
+	    
 	
 	    setVisible(true);
 	}

@@ -9,7 +9,7 @@ public class AttackPhase {
 		unit = u;
 	}
 	
-	public void attack(Unit u) {
+	public void run(Unit u) {
 		if(unit instanceof Healer) {
 			if(u.isPlayerControlled()) {
 				((Healer)unit).heal(u);

@@ -10,6 +10,8 @@ public class Unit {
 	private int hp;
 	private int power;
 	private boolean isPlayerControlled;
+	private int movementDistance;
+	
 	//
 	/**
 	 * Creates a default unit with both hp and power at 10
@@ -18,18 +20,22 @@ public class Unit {
 	{
 		hp = 10;
 		power = 10;
+		movementDistance = 1;
 	}
 	
 	/**Creates a unit
 	 * 
+	 * @param isPlayerControlled wether or not the player controls the unit
 	 * @param hp the amount of health points the unit will have
 	 * @param power the amount of damage/healing the unit will do
+	 * @param movementDistance how far the unit can move in one time
 	 */
-	public Unit(boolean isPlayerControlled, int hp, int power)
+	public Unit(boolean isPlayerControlled, int hp, int power, int movementDistance)
 	{
 		this.isPlayerControlled = isPlayerControlled;
 		this.hp = hp;
 		this.power = power;
+		this.movementDistance = movementDistance;
 	}
 	
 	/**Heals the unit
@@ -62,8 +68,10 @@ public class Unit {
 	
 	/**Moves the unit
 	 * 
+	 * @param degree the direction to move
+	 * 
 	 */
-	public void move()
+	public void move(int degree)
 	{
 		
 		

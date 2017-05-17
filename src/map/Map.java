@@ -20,6 +20,13 @@ public class Map {
 		return null;
 	}
 	
+	public Unit getObjectAtSpot(int r, int c, int degrees) {
+		if(r >= 0 && r < 15 && c >= 0 && c < 15) {
+			return map[r][c].getUnit();
+		}
+		return null;
+	}
+	
 	public Unit getAdjacentObject(int r, int c, int degrees) {
 		if(degrees == 0) {
 			if(r+1 < 15) {
@@ -47,6 +54,8 @@ public class Map {
 			}
 		}
 	}
+	
+	
 	
 	public void paintComponent(Graphics g, int height, int width) {
 		int xDist = height/15;

@@ -64,7 +64,7 @@ public class Map {
 		int xCor = xDist;
 		int yCor = yDist;
 		
-		for(int x = 0; x <= 20; x++) {
+		for(int x = 1; x < 20; x++) {
 			g.drawLine(xCor, 0, xCor, height);
 			g.drawLine(0, yCor, width, yCor);
 			xCor += xDist;

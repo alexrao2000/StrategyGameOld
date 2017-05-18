@@ -25,7 +25,7 @@ public class MainMenu extends JPanel implements ActionListener {
 		p.add(Box.createVerticalStrut(300));   // Move down by 300 pixels  
 
 		img = Toolkit.getDefaultToolkit().createImage("battle.jpg");
-		img = img.getScaledInstance(800, 600, Image.SCALE_DEFAULT);
+		img = img.getScaledInstance(600, 600, Image.SCALE_DEFAULT);
 		
 		button1 = new JButton("Start");
 		button2 = new JButton("Load");
@@ -47,7 +47,7 @@ public class MainMenu extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
-		double ratioX = getWidth() / 800.0;
+		double ratioX = getWidth() / 600.0;
 		double ratioY = getHeight() / 600.0;
 		
 		Graphics2D g2 = (Graphics2D)g;
@@ -59,7 +59,7 @@ public class MainMenu extends JPanel implements ActionListener {
 		
 		g.setColor(Color.RED);
 		g.setFont(new Font(Font.SANS_SERIF, Font.ITALIC, 45));
-		g.drawString("Batallion", 305, 200);
+		g.drawString("Batallion", 205, 200);
 		
 		g2.setTransform(af);
 	}

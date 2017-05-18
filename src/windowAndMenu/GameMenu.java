@@ -33,7 +33,7 @@ public class GameMenu extends JPanel implements KeyListener {
 		int width = getWidth();
 		int height = getHeight();
 
-		double ratioX = (double)width/800.0;
+		double ratioX = (double)width/600.0;
 		double ratioY = (double)height/600.0;
 
 		AffineTransform at = g2.getTransform();

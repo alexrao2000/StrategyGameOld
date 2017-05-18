@@ -1,5 +1,7 @@
 package units;
 
+import java.awt.Graphics;
+
 /**This class represents a Unit object on the grid
  * 
  * @author ewan633
@@ -103,5 +105,11 @@ public class Unit {
 	public boolean isPlayerControlled()
 	{
 		return isPlayerControlled;
+	}
+
+	public void draw(Graphics g, int xCor, int xDist, int yCor, int yDist)
+	{
+		g.drawOval(xCor, yCor, xDist, yDist);
+		
 	}
 }

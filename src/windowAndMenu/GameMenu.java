@@ -10,6 +10,7 @@ import java.awt.geom.AffineTransform;
 import javax.swing.JPanel;
 
 import map.Map;
+import units.Attacker;
 
 
 public class GameMenu extends JPanel implements KeyListener {
@@ -21,6 +22,7 @@ public class GameMenu extends JPanel implements KeyListener {
 		this.m = m;
 		setBackground(Color.WHITE);
 		map = new Map();
+		map.getTile(0, 0).addUnit(new Attacker());
 	}
 
 
@@ -33,7 +35,7 @@ public class GameMenu extends JPanel implements KeyListener {
 		int width = getWidth();
 		int height = getHeight();
 
-		double ratioX = (double)width/600.0;
+		double ratioX = (double)width/800.0;
 		double ratioY = (double)height/600.0;
 
 		AffineTransform at = g2.getTransform();

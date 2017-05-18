@@ -1,5 +1,7 @@
 package units;
 
+import java.awt.Graphics;
+
 /**This class represents a unit that can heal, a healer
  * 
  * @author ewan633
@@ -47,9 +49,9 @@ public class Healer extends Unit
 		
 	}
 	
-	public void draw()
+	public void draw(Graphics g, int xCor, int xDist, int yCor, int yDist)
 	{
-		
+		g.drawRect(xCor, yCor, xDist, yDist);
 		
 	}
 	

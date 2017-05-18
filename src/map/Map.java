@@ -9,11 +9,16 @@ public class Map {
 	
 	public Map() {
 		map = new Tile[20][20];
+		for (int i = 0; i < map[0].length; i++) {
+			for (int j = 0; j < map.length; j++) {
+				map[i][j] = new Tile("land");
+			}
+		}
 	}
 	
 	public Tile getTile(int r, int c) {
-		if(r >= 20 || r < 0) {
-			if(c >= 20 || c < 0) {
+		if(r < 20 && r >= 0) {
+			if(c < 20 && c >= 0) {
 				return map[r][c];
 			}
 		}
@@ -64,9 +69,14 @@ public class Map {
 		int xCor = xDist;
 		int yCor = yDist;
 		
-		for(int x = 1; x < 20; x++) {
+		for(int x = 0; x < 19; x++) {
 			g.drawLine(xCor, 0, xCor, height);
 			g.drawLine(0, yCor, width, yCor);
+			for(int y = 0; y < 19; y++) {
+				if (map[x][y].getUnit() != null) {
+					map[x][y].getUnit().draw(g, xCor + xDist/4, xDist/2, yCor + yDist/4, yDist/2);
+				}
+			}
 			xCor += xDist;
 			yCor += yDist;
 		}

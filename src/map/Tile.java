@@ -12,6 +12,11 @@ public class Tile {
 	private String terrain;
 	private Unit unit;
 	
+	public Tile(String terr) {
+		terrain = terr;
+		unit = null;
+	}
+	
 	public Tile(String terr, Unit object) {
 		terrain = terr;
 		unit = object;

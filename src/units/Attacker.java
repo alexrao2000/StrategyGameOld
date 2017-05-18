@@ -1,5 +1,7 @@
 package units;
 
+import java.awt.Graphics;
+
 public class Attacker extends Unit{
 	
 	private int hp;
@@ -52,9 +54,9 @@ public class Attacker extends Unit{
 		this.weapon = weapon;
 	}
 	
-	public void draw()
+	public void draw(Graphics g, int xCor, int xDist, int yCor, int yDist)
 	{
-		
+		g.drawOval(xCor, yCor, xDist, yDist);
 		
 	}
 	

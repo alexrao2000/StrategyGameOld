@@ -19,6 +19,7 @@ public class MovementPhase {
 			if(r < currentRow+range && r > currentRow+range && c < currentCol+range && c > currentCol+range) {
 				if(map.getObjectAtSpot(currentRow, currentCol).equals(null)) {
 					map.changeUnitPlace(unit, r, c);
+					
 				}
 			}
 		}

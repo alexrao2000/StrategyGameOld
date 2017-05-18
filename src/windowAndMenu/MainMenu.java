@@ -25,7 +25,7 @@ public class MainMenu extends JPanel implements ActionListener {
 		p.add(Box.createVerticalStrut(300));   // Move down by 300 pixels  
 
 		img = Toolkit.getDefaultToolkit().createImage("battle.jpg");
-		img = img.getScaledInstance(800, 600, 0);
+		img = img.getScaledInstance(800, 600, Image.SCALE_DEFAULT);
 		
 		button1 = new JButton("Start");
 		button2 = new JButton("Load");

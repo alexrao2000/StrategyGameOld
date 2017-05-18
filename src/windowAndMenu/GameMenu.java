@@ -39,11 +39,10 @@ public class GameMenu extends JPanel implements KeyListener {
 		AffineTransform at = g2.getTransform();
 		g2.scale(ratioX, ratioY);
 
-		map.paintComponent(g, height, width);
-
 		g2.setTransform(at);
 
 		// TODO Add any custom drawings here
+		map.paintComponent(g2, height, width);
 	}
 
 

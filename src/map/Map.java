@@ -25,7 +25,7 @@ public class Map {
 		return null;
 	}
 	
-	public Unit getObjectAtSpot(int r, int c, int degrees) {
+	public Unit getObjectAtSpot(int r, int c) {
 		if(r >= 0 && r < 20 && c >= 0 && c < 20) {
 			return map[r][c].getUnit();
 		}

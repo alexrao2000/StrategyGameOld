@@ -10,9 +10,11 @@ import java.awt.geom.AffineTransform;
 
 import javax.swing.JPanel;
 
+import map.Map;
+
 
 public class GameMenu extends JPanel implements KeyListener {
-	private String message;
+	private Map map;
 	private Main m;
 
 	public GameMenu (Main m) {

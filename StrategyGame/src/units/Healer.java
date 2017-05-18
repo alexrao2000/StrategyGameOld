@@ -48,7 +48,7 @@ public class Healer extends Unit
 	public void heal(Unit other)
 	{
 		other.getHealed(this);
-		
+		//
 	}
 	
 	public void draw(Graphics g, int xCor, int xDist, int yCor, int yDist)

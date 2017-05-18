@@ -92,6 +92,14 @@ public class Unit {
 		
 	}
 	
+	/**Returns the distance the unit can move in one turn
+	 * 
+	 * @return
+	 */
+	public int getMovementDistance() {
+		return movementDistance;
+	}
+	
 	/**Levels the unit up; increases hp and power by a random number
 	 * 
 	 */

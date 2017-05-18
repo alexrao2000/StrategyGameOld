@@ -18,6 +18,7 @@ public class Attacker extends Unit{
 		power = 10;
 		movementDistance = 10;
 		level = 1;
+		weapon = new Weapon();
 	}
 	
 	/**Creates an attacker object that can move and attack

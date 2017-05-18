@@ -1,7 +1,5 @@
 package units;
 
-import java.util.ArrayList;
-
 public class Attacker extends Unit{
 	
 	private int hp;

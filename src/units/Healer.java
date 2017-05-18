@@ -12,7 +12,7 @@ public class Healer extends Unit
 	private int level;
 	private int movementDistance;
 	private boolean isPlayerControlled;
-	
+	//
 	
 	/**Creates a default healer object
 	 * 

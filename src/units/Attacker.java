@@ -9,7 +9,7 @@ public class Attacker extends Unit{
 	//private ArrayList<Weapon> weapons;
 	private boolean isPlayerControlled;
 	private Weapon weapon;
-	//
+	
 	public Attacker()
 	{
 		hp = 10;

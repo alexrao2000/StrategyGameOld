@@ -11,14 +11,13 @@ public class Attacker extends Unit{
 	//private ArrayList<Weapon> weapons;
 	private boolean isPlayerControlled;
 	private Weapon weapon;
-	//
+	
 	public Attacker()
 	{
 		hp = 10;
 		power = 10;
 		movementDistance = 10;
 		level = 1;
-		weapon = new Weapon();
 	}
 	
 	/**Creates an attacker object that can move and attack

@@ -60,7 +60,29 @@ public class Map {
 		}
 	}
 	
+	public int getUnitRow(Unit u) {
+		for(int r = 0; r < 15; r++) {
+			for(int c = 0; c < 15; c++) {
+				if(map[r][c].getUnit().equals(u)) {
+					return r;
+				}
+			}
+		}
+		
+		return -1;
+	}
 	
+	public int getUnitCol(Unit u) {
+		for(int r = 0; r < 15; r++) {
+			for(int c = 0; c < 15; c++) {
+				if(map[r][c].getUnit().equals(u)) {
+					return c;
+				}
+			}
+		}
+		
+		return -1;
+	}
 	
 	public void paintComponent(Graphics g, int height, int width) {
 		int xDist = width/20;

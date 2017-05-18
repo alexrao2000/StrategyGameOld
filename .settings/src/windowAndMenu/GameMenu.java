@@ -1,6 +1,7 @@
 package windowAndMenu;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.KeyEvent;
@@ -9,18 +10,16 @@ import java.awt.geom.AffineTransform;
 
 import javax.swing.JPanel;
 
-import map.Map;
-
 
 public class GameMenu extends JPanel implements KeyListener {
-	private Map map;
+	private String message;
 	private Main m;
 
 	public GameMenu (Main m) {
 		super();
 		this.m = m;
 		setBackground(Color.WHITE);
-		map = new Map();
+		message = "WIP (Press ESC)";
 	}
 
 
@@ -39,10 +38,14 @@ public class GameMenu extends JPanel implements KeyListener {
 		AffineTransform at = g2.getTransform();
 		g2.scale(ratioX, ratioY);
 
+		g.setColor(Color.BLACK);
+		g.setFont(new Font("SansSerif",Font.BOLD,28));
+		int strWidth = g.getFontMetrics().stringWidth(message);
+		g.drawString(message, 400-strWidth/2, 300);
+
 		g2.setTransform(at);
 
 		// TODO Add any custom drawings here
-		map.paintComponent(g2, height, width);
 	}
 
 

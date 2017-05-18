@@ -1,5 +1,11 @@
 package windowAndMenu;
 
+import java.awt.event.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.*;
@@ -11,7 +17,7 @@ public class Main extends JFrame {
 	public Main(String title) {
 		super(title);
 		
-		setBounds(400, 100, 600, 600);
+		setBounds(100, 100, 800, 600);
 	    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
 	    cardPanel = new JPanel();

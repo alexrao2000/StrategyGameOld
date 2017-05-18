@@ -2,15 +2,21 @@ package windowAndMenu;
 
 import java.awt.*;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 import java.awt.event.*;
 import java.awt.geom.AffineTransform;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
 
 public class MainMenu extends JPanel implements ActionListener {
 	
 	private Main m;
 	private Image img;
+	//Image img;
 	JButton button1;
 	JButton button2;
 	JButton button3;
@@ -25,7 +31,7 @@ public class MainMenu extends JPanel implements ActionListener {
 		p.add(Box.createVerticalStrut(300));   // Move down by 300 pixels  
 
 		img = Toolkit.getDefaultToolkit().createImage("battle.jpg");
-		img = img.getScaledInstance(800, 600, Image.SCALE_DEFAULT);
+		img = img.getScaledInstance(800, 600, 0);
 		
 		button1 = new JButton("Start");
 		button2 = new JButton("Load");

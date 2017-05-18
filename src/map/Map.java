@@ -16,6 +16,14 @@ public class Map {
 		}
 	}
 	
+	public void changeUnitPlace(Unit u, int newR, int newC) {
+		if(newR < 15 && newR >= 0 && newC < 15 &&  newC >= 0 && map[newR][newC].equals(null)) {
+			Unit x = map[getUnitRow(u)][getUnitCol(u)].getUnit();
+			map[getUnitRow(u)][getUnitCol(u)].removeUnit();
+			map[newR][newC].addUnit(x);
+		}
+	}
+	
 	public Tile getTile(int r, int c) {
 		if(r < 20 && r >= 0) {
 			if(c < 20 && c >= 0) {

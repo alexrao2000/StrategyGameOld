@@ -11,8 +11,9 @@ public class Unit {
 	private int power;
 	private boolean isPlayerControlled;
 	private int movementDistance;
-	
+	private int level;
 	//
+	
 	/**
 	 * Creates a default unit with both hp and power at 10
 	 */
@@ -20,7 +21,8 @@ public class Unit {
 	{
 		hp = 10;
 		power = 10;
-		movementDistance = 1;
+		movementDistance = 10;
+		level = 1;
 	}
 	
 	/**Creates a unit
@@ -36,6 +38,7 @@ public class Unit {
 		this.hp = hp;
 		this.power = power;
 		this.movementDistance = movementDistance;
+		level = 1;
 	}
 	
 	/**Heals the unit
@@ -92,6 +95,7 @@ public class Unit {
 	 */
 	public void levelUp()
 	{
+		level++;
 		hp += (int)(Math.random()*10);
 		power += (int)(Math.random()*10);
 	}

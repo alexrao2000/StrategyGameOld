@@ -9,6 +9,8 @@ public class Healer extends Unit
 {
 	private int hp;
 	private int power;
+	private int level;
+	private int movementDistance;
 	private boolean isPlayerControlled;
 	//
 	
@@ -17,8 +19,10 @@ public class Healer extends Unit
 	 */
 	public Healer()
 	{
-		super();
-		
+		hp = 5;
+		power = 10;
+		movementDistance = 15;
+		level = 1;
 	}
 	
 	/**Creates a healer

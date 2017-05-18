@@ -1,5 +1,6 @@
 package units;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Attacker extends Unit{
@@ -18,6 +19,7 @@ public class Attacker extends Unit{
 		power = 10;
 		movementDistance = 10;
 		level = 1;
+		isPlayerControlled = true;
 	}
 	
 	/**Creates an attacker object that can move and attack
@@ -56,7 +58,11 @@ public class Attacker extends Unit{
 	
 	public void draw(Graphics g, int xCor, int xDist, int yCor, int yDist)
 	{
-		g.drawOval(xCor, yCor, xDist, yDist);
+		g.setColor(Color.RED);
+		if (isPlayerControlled)
+			g.setColor(Color.BLUE);
+		g.fillOval(xCor, yCor, xDist, yDist);
+		g.setColor(Color.BLACK);
 		
 	}
 	

@@ -74,7 +74,7 @@ public class Map {
 			g.drawLine(0, yCor, width, yCor);
 			for(int y = 0; y < 19; y++) {
 				if (map[x][y].getUnit() != null) {
-					map[x][y].getUnit().draw(g, xCor/4, xDist/2, yCor/4, yDist/2);
+					map[x][y].getUnit().draw(g, xCor + xDist/4, xDist/2, yCor + yDist/4, yDist/2);
 				}
 			}
 			xCor += xDist;

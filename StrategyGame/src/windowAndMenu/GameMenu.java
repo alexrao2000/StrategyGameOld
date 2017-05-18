@@ -23,7 +23,7 @@ public class GameMenu extends JPanel implements KeyListener {
 		this.m = m;
 		setBackground(Color.WHITE);
 		map = new Map();
-		map.getTile(0, 0).addUnit(new Healer());
+		map.getTile(19, 19).addUnit(new Healer());
 		map.getTile(1, 1).addUnit(new Attacker());
 	}
 
